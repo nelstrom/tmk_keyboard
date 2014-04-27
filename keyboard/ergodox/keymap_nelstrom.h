@@ -3,7 +3,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         // left hand
         EQL, 1,   2,   3,   4,   5,   ESC,
         TAB, Q,   W,   E,   R,   T,   FN2,
-        LCTL,A,   S,   D,   F,   G,
+        FN7 ,A,   S,   D,   F,   G,
         LSFT,Z,   X,   C,   V,   B,   FN1,
         NO,  NO,  NO,  LALT,LGUI,
                                       FN5, NO,
@@ -17,7 +17,7 @@ static const uint8_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
                        RGUI,RALT,NO,  NO,  NO,
         NO,NO,
         NO,
-        NO,ENT, SPC
+        NO,ENT, FN6
     ),
 
     KEYMAP(  // layer 1 : function and symbol keys
@@ -121,6 +121,8 @@ static const uint16_t PROGMEM fn_actions[] = {
     ACTION_LAYER_SET(3, ON_PRESS),                  // FN3 - push Layer3
     ACTION_LAYER_SET(0, ON_PRESS),                  // FN4 - push Layer0
     ACTION_LAYER_SET(4, ON_PRESS),                  // FN5 - push Layer4 - Plover!
+    ACTION_LAYER_TAP_KEY(1, KC_SPC),                // FN6 - Hold for alt layer, tap for SPC
+    ACTION_MODS_TAP_KEY(MOD_LCTL, KC_ESC),          // FN7 - Hold for LCTL, tap for ESC
 };
 
 void action_function(keyrecord_t *event, uint8_t id, uint8_t opt)
