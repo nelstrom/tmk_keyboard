@@ -143,3 +143,6 @@ simon: all
 plover: OPT_DEFS += -DKEYMAP_PLOVER
 plover: all
 
+nelstrom: OPT_DEFS += -DKEYMAP_NELSTROM
+nelstrom: all
+
