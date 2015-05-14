@@ -1,0 +1,3 @@
+#!/bin/sh
+
+make -f Makefile.lufa clean && make -f Makefile.lufa nelstrom && make -f Makefile.lufa teensy
